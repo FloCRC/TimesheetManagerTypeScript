@@ -5,6 +5,7 @@ import Nav from "./components/Nav"
 import Timesheets from "./pages/Timesheets"
 import Projects from "./pages/Projects"
 import Employees from "./pages/Employees"
+import AddTimesheet from "./pages/AddTimesheet"
 
 export default function App() {
 
@@ -27,7 +28,6 @@ export default function App() {
             })
             .then((data) => {
                 setProjects(data.data)
-                console.log(data.data)
             })
 
         fetch("http://localhost:8001/api/employees")
@@ -49,6 +49,7 @@ export default function App() {
                     <Route path="/" element={<Timesheets timesheets={timesheets} />} />
                     <Route path="/Projects" element={<Projects projects={projects} />} />
                     <Route path="/Employees" element={<Employees employees={employees} />} />
+                    <Route path="/AddTimesheet" element={<AddTimesheet employees={employees} projects={projects} />} />
                 </Routes>
             </div>
         </BrowserRouter>

@@ -1,6 +1,5 @@
 import TimesheetDisplay from "../../components/TimesheetDisplay"
 
-
 export default function Timesheets({ timesheets }) {
 
     return (
