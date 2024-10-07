@@ -10,7 +10,6 @@ export default function Nav() {
                         <Link to="/" className="font-semibold text-slate-200 hover:text-blue-300">Timesheets</Link>
                         <Link to="/Projects" className="font-semibold text-slate-200 hover:text-blue-300">Projects</Link>
                         <Link to="/Employees" className="font-semibold text-slate-200 hover:text-blue-300">Employees</Link>
-                        <Link to="/AddTimesheet" className="font-semibold text-slate-200 hover:text-blue-300">Add Timesheet</Link>
                     </div>
                 </div>
             </nav>
