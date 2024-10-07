@@ -2,14 +2,18 @@ export default function ProjectDisplay({ project }) {
 
     return (
         <>
-            <div className="flex flex-col border border-slate-600 bg-white my-2 p-2 w-2/5">
+            <div className="flex flex-col border border-slate-600 bg-white my-2 p-3 w-2/5">
                 <div className="flex justify-between pb-2">
-                    <div>Project ID: <span className="font-bold">{project.id}</span></div>
-                    <div>Time Required <span className="font-bold">{project.estimated_time_required}</span></div>
+                    <div className="text-slate-600">ID: <span className="font-bold text-blue-500">{project.id}</span></div>
+                    <div className="text-slate-600">Time Required <span className="font-bold text-blue-500">{project.estimated_time_required} Hours</span></div>
                 </div>
-                <div className="pb-2">
-                    <div>Time Taken: <span className="font-bold">{project.time_spent} Hours</span></div>
-                    <div>Time Remaining: <span className="font-bold">{project.expected_time_remaining} Hours</span></div>
+                <div className="flex justify-between pb-2">
+                    <div></div>
+                    <div className="text-slate-600">Time Taken So Far: <span className="font-bold text-blue-500">{project.time_spent} Hours</span></div>
+                </div>
+                <div className="flex justify-between pb-2">
+                    <div></div>
+                    <div className="text-slate-600">Time Remaining: <span className="font-bold text-blue-500">{project.expected_time_remaining} Hours</span></div>
                 </div>
             </div>
         </>
