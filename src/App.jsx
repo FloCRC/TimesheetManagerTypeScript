@@ -41,7 +41,7 @@ export default function App() {
 
     return (
         <BrowserRouter>
-            <div className="flex flex-col">
+            <div className="flex flex-col bg-slate-200 h-screen">
                 <div className="bg-slate-500 border-b border-slate-700 px-5">
                     <Nav />
                 </div>
