@@ -12,7 +12,6 @@ export default function SingleTimesheet() {
     const [description, setDescription] = useState('')
     const [projectTimeRemaining, setProjectTimeRemaining] = useState('')
     const [dateCreated, setDateCreated] = useState('')
-    const [timesheet, setTimesheet] = useState('')
 
 
     useEffect(() => {
@@ -26,7 +25,6 @@ export default function SingleTimesheet() {
                 setDescription(data.data.description)
                 setProjectTimeRemaining(data.data.project.expected_time_remaining)
                 setDateCreated(data.data.created_at)
-                setTimesheet(data.data)
             })
     }, [])
 
@@ -36,7 +34,6 @@ export default function SingleTimesheet() {
                 <h1 className="text-2xl py-5 text-blue-500 font-bold">Timesheet {timesheetID}</h1>
                 <div className="flex flex-wrap justify-between">
                     <TimesheetDetailsDisplay
-                        key={timesheet.id}
                         projectID={projectID}
                         employeeFirstName={employeeFirstName}
                         employeeLastName={employeeLastName}

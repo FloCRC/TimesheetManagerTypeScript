@@ -8,8 +8,8 @@ export default function Nav() {
                 <div className="flex justify-center py-5">
                     <div className="flex justify-between w-[1000px]">
                         <Link to="/" className="font-semibold text-slate-200 hover:text-blue-300">Timesheets</Link>
-                        <Link to="/Projects" className="font-semibold text-slate-200 hover:text-blue-300">Projects</Link>
-                        <Link to="/Employees" className="font-semibold text-slate-200 hover:text-blue-300">Employees</Link>
+                        <Link to="/projects" className="font-semibold text-slate-200 hover:text-blue-300">Projects</Link>
+                        <Link to="/employees" className="font-semibold text-slate-200 hover:text-blue-300">Employees</Link>
                     </div>
                 </div>
             </nav>
