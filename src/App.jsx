@@ -9,6 +9,7 @@ import AddTimesheet from "./pages/AddTimesheet"
 import SingleTimesheet from "./pages/SingleTimesheet"
 import SingleProject from "./pages/SingleProject"
 import SingleEmployee from "./pages/SingleEmployee"
+import TodaysTimesheets from "./pages/TodaysTimesheets"
 
 export default function App() {
 
@@ -56,6 +57,7 @@ export default function App() {
                     <Route path="/employees" element={<Employees employees={employees} />} />
                     <Route path="/employees/:employeeID" element={<SingleEmployee />} />
                     <Route path="/addTimesheet" element={<AddTimesheet employees={employees} projects={projects} />} />
+                    <Route path="/todaysTimesheets/:employeeID" element={<TodaysTimesheets />} />
                 </Routes>
             </div>
         </BrowserRouter>
