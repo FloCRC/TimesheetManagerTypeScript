@@ -62,7 +62,7 @@ export default function AddTimesheet({ employees, projects }) {
     return (
         <div className="flex justify-center bg-slate-200">
             <div className="flex flex-col w-[1000px] mx-5">
-                <h1 className="text-2xl py-5 text-blue-500 font-bold">Add Timesheet</h1>
+                <h1 className="text-2xl py-2 text-blue-500 font-bold">Add Timesheet</h1>
                 <form onSubmit={submitHandler} className="grid grid-cols-2 gap-y-2">
                     <label htmlFor="employeeID" className="font-bold text-slate-600 items-end pt-1">Employee ID:</label>
                     <select onChange={updateEmployeeID} name="employeeID" id="employeeID" className="p-1 rounded">

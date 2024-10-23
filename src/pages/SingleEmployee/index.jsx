@@ -56,8 +56,8 @@ export default function SingleEmployee() {
         <div className="flex justify-center bg-slate-200">
             <div className="flex flex-col w-[1000px] mx-5">
                 <div className="flex justify-between items-center py-2">
-                    <h1 className="text-2xl py-5 text-blue-500 font-bold">{firstName} {lastName}'s' Timesheets</h1>
-                    <button onClick={updateTimesheets} className="p-2 w-40 font-semibold border border-black rounded bg-white text-slate-600 hover:shadow-inner hover:bg-blue-200">{buttonText}</button>
+                    <h1 className="text-2xl text-blue-500 font-bold">{firstName} {lastName}'s' Timesheets</h1>
+                    <button onClick={updateTimesheets} className="px-2 py-1 w-40 font-semibold border border-black rounded bg-white text-slate-600 hover:shadow-inner hover:bg-blue-200">{buttonText}</button>
                 </div>
                 <div className="flex flex-wrap justify-between">
                     {message == '' ? timesheets.map(timesheet => <TimesheetDisplay key={timesheet.id} timesheet={timesheet} />) : message}

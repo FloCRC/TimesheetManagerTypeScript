@@ -24,7 +24,7 @@ export default function SingleProject() {
     return (
         <div className="flex justify-center bg-slate-200">
             <div className="flex flex-col w-[1000px] mx-5">
-                <h1 className="text-2xl py-5 text-blue-500 font-bold">Project {projectID} Timesheets</h1>
+                <h1 className="text-2xl py-2 text-blue-500 font-bold">Project {projectID} Timesheets</h1>
                 <div className="flex flex-wrap justify-between text-slate-600">
                     {timesheets.map(timesheet => <TimesheetDisplay key={timesheet.id} timesheet={timesheet} />)}{message}
                 </div>
