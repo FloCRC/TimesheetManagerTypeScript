@@ -10,7 +10,7 @@ export default function TimesheetDetailsDisplay({ projectID, employeeFirstName, 
                     <div className="text-slate-600">Project ID: <span className="font-bold text-blue-500">{projectID}</span></div>
                     <div className="text-slate-600">Date Created: <span className="font-bold text-blue-500">{date}</span></div>
                     <div className="text-slate-600">Time Taken: <span className="font-bold text-blue-500">{timeTaken} Hours</span></div>
-                    <div className="text-slate-600">Time Remaining on Project: <span className="font-bold text-blue-500">{projectTimeRemaining} Hours</span></div>
+                    <div className="text-slate-600">Estimated time Remaining on Project: <span className="font-bold text-blue-500">{projectTimeRemaining} Hours</span></div>
                     <div className="text-slate-600">Description:</div>
                     <div className="font-semibold text-slate-600">{description}</div>
                 </div>
