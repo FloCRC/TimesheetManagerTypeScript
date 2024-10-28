@@ -1,8 +1,13 @@
-# React + Vite
+# Timesheet Manager Front End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description
 
-Currently, two official plugins are available:
+This is a front end application using ReactJS to display and interact with my Timesheet Manager API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instructions
+
+- Fork this Repository
+- Clone your forked repository
+- Run "npm install" in terminal
+- Change the baseURL in src/constants/global.jsx to your API local URL
+- Run "npm run dev" in terminal

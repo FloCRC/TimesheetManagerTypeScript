@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import TimesheetDisplay from "../../components/TimesheetDisplay"
+import { baseURL } from "../../constants/global"
 
 export default function SingleEmployee() {
 
@@ -13,7 +14,7 @@ export default function SingleEmployee() {
     const [buttonText, setButtonText] = useState("Today's Timesheets")
 
     useEffect(() => {
-        fetch(`http://localhost:8001/api/employees/${employeeID}`)
+        fetch(`${baseURL}/employees/${employeeID}`)
             .then(res => res.json())
             .then(data => {
                 setFirstName(data.data.first_name)
@@ -22,7 +23,7 @@ export default function SingleEmployee() {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:8001/api/${url}`)
+        fetch(`${baseURL}/${url}`)
             .then(res => res.json())
             .then(data => {
                 if (data.message != "This employee has no timesheets." && data.message != "This employee has no timesheets today.") {

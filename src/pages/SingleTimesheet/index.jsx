@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import TimesheetDetailsDisplay from "../../components/TimesheetDetailsDisplay"
 import { useParams } from "react-router-dom"
+import { baseURL } from "../../constants/global"
 
 export default function SingleTimesheet() {
 
@@ -15,7 +16,7 @@ export default function SingleTimesheet() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:8001/api/timesheets/${timesheetID}`)
+        fetch(`${baseURL}/timesheets/${timesheetID}`)
             .then(res => res.json())
             .then(data => {
                 setProjectID(data.data.project_id)

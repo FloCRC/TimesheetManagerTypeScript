@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { baseURL } from "../../constants/global"
 
 export default function AddTimesheet({ employees, projects }) {
 
@@ -43,7 +44,7 @@ export default function AddTimesheet({ employees, projects }) {
             time_taken: timeTaken,
             description: description
         }
-        fetch('http://localhost:8001/api/timesheets', {
+        fetch(`${baseURL}/timesheets`, {
             method: "POST",
             body: JSON.stringify(newTimesheet),
             headers: {

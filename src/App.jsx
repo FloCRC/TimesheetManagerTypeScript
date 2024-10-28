@@ -9,6 +9,7 @@ import AddTimesheet from "./pages/AddTimesheet"
 import SingleTimesheet from "./pages/SingleTimesheet"
 import SingleProject from "./pages/SingleProject"
 import SingleEmployee from "./pages/SingleEmployee"
+import { baseURL } from "./constants/global"
 
 export default function App() {
 
@@ -17,7 +18,7 @@ export default function App() {
     const [employees, setEmployees] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:8001/api/timesheets")
+        fetch(`${baseURL}/timesheets`)
             .then((res) => {
                 return res.json()
             })
@@ -25,7 +26,7 @@ export default function App() {
                 setTimesheets(data.data)
             })
 
-        fetch("http://localhost:8001/api/projects")
+        fetch(`${baseURL}/projects`)
             .then((res) => {
                 return res.json()
             })
@@ -33,7 +34,7 @@ export default function App() {
                 setProjects(data.data)
             })
 
-        fetch("http://localhost:8001/api/employees")
+        fetch(`${baseURL}/employees`)
             .then((res) => {
                 return res.json()
             })
