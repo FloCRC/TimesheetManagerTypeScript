@@ -29,6 +29,14 @@ export default function AddTimesheet({ employees, projects }) {
     }
 
     function createTimesheet() {
+        if (timeTaken > 24 || timeTaken < 0) {
+            setMessage("Time Taken must be between 0 and 24 hours.")
+            return
+        }
+        if (description.length > 100) {
+            setMessage("Description cannot be longer than 100 characters.")
+            return
+        }
         let newTimesheet = {
             employee_id: employeeID,
             project_id: projectID,
@@ -73,9 +81,9 @@ export default function AddTimesheet({ employees, projects }) {
                         {projects.map(project => <option key={project.id}>{project.id}</option>)}
                     </select>
                     <label htmlFor="timeTaken" className="font-bold text-slate-600 pt-1">Time Taken:</label>
-                    <input onChange={updateTimeTaken} name="timeTaken" id="TimeTaken" type="integer" placeholder="hours" className="p-1 rounded" />
+                    <input onChange={updateTimeTaken} name="timeTaken" id="TimeTaken" type="integer" placeholder="hours (max 24)" className="p-1 rounded" />
                     <label htmlFor="description" className="font-bold text-slate-600 pt-1">Description:</label>
-                    <textarea onChange={updateDescription} name="description" id="description" placeholder="Describe what you achieved. Maximum 100 characters." className="p-1 rounded" />
+                    <textarea onChange={updateDescription} name="description" id="description" placeholder="Describe what you achieved (Maximum 100 characters)" className="p-1 rounded" />
                     <div className={!timeSheetCreated ? "text-red-500" : "text-green-500"}>{message}</div>
                     {!timeSheetCreated ? addTimesheetButton : disableAddTimesheetButton}
                 </form>
