@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 
-export default function EmployeeDisplay({ employee }) {
+interface Employee {
+    id: number
+    first_name: string
+    last_name: string
+}
+
+type Props = {
+    employee: Employee
+}
+
+const EmployeeDisplay = ({ employee }: Props) => {
 
     return (
         <>
@@ -15,3 +25,5 @@ export default function EmployeeDisplay({ employee }) {
         </>
     )
 }
+
+export default EmployeeDisplay

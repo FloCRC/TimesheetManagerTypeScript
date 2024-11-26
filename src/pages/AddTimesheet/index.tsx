@@ -10,7 +10,7 @@ export default function AddTimesheet({ employees, projects }) {
     const [description, setDescription] = useState('')
     const [message, setMessage] = useState('')
     const [timeSheetCreated, setTimesheetCreated] = useState(false)
-    const addTimesheetButton = <button type='Submit' onClick={createTimesheet} className="border border-slate-600 rounded bg-white hover:shadow-inner hover:bg-blue-400">Add Timesheet</button>
+    const addTimesheetButton = <button type='submit' onClick={createTimesheet} className="border border-slate-600 rounded bg-white hover:shadow-inner hover:bg-blue-400">Add Timesheet</button>
     const disableAddTimesheetButton = <Link to="/"><button className="border border-slate-600 rounded bg-green-400 hover:shadow-inner hover:bg-green-200 w-full">Timesheet Added! Click to go Home.</button></Link>
 
     function updateEmployeeID(e) {
