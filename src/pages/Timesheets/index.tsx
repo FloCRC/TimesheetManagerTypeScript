@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom"
 import TimesheetDisplay from "../../components/TimesheetDisplay"
 
-export default function Timesheets({ timesheets }) {
+interface Timesheet {
+    id: number
+    project_id: number
+    employee_id: number
+    time_taken: number
+    description: string
+}
+
+type Props = {
+    timesheets: Array<Timesheet>
+}
+
+export default function Timesheets({ timesheets }: Props) {
 
     return (
         <div className="flex justify-center bg-slate-200">

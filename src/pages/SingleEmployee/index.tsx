@@ -1,12 +1,20 @@
-import { useEffect, useState } from "react"
+import { MouseEvent, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import TimesheetDisplay from "../../components/TimesheetDisplay"
 import { baseURL } from "../../constants/global"
 
+interface Timesheet {
+    id: number
+    project_id: number
+    employee_id: number
+    time_taken: number
+    description: string
+}
+
 export default function SingleEmployee() {
 
     const { employeeID } = useParams()
-    const [timesheets, setTimesheets] = useState([])
+    const [timesheets, setTimesheets] = useState<Array<Timesheet>>([])
     const [message, setMessage] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -41,7 +49,7 @@ export default function SingleEmployee() {
             })
     }, [url])
 
-    function updateTimesheets(e) {
+    function updateTimesheets(e: MouseEvent) {
         e.preventDefault()
         if (buttonText == "Today's Timesheets") {
             setURL(`timesheets/today/${employeeID}`)

@@ -1,6 +1,17 @@
 import ProjectDisplay from "../../components/ProjectDisplay";
 
-export default function Projects({ projects }) {
+interface Project {
+    id: number
+    estimated_time_required: number
+    time_spent: number
+    expected_time_remaining: number
+}
+
+type Props = {
+    projects: Array<Project>
+}
+
+export default function Projects({ projects }: Props) {
 
     return (
         <div className="flex justify-center bg-slate-200">

@@ -3,10 +3,18 @@ import { useParams } from "react-router-dom"
 import TimesheetDisplay from "../../components/TimesheetDisplay"
 import { baseURL } from "../../constants/global"
 
+interface Timesheet {
+    id: number
+    project_id: number
+    employee_id: number
+    time_taken: number
+    description: string
+}
+
 export default function SingleProject() {
 
     const { projectID } = useParams()
-    const [timesheets, setTimesheets] = useState([])
+    const [timesheets, setTimesheets] = useState<Array<Timesheet>>([])
     const [message, setMessage] = useState('')
 
     useEffect(() => {

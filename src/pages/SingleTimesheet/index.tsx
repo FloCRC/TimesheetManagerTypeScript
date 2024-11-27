@@ -35,12 +35,12 @@ export default function SingleTimesheet() {
                 <h1 className="text-2xl py-2 text-blue-500 font-bold">Timesheet {timesheetID}</h1>
                 <div className="flex flex-wrap justify-between">
                     <TimesheetDetailsDisplay
-                        projectID={projectID}
+                        projectID={+projectID}
                         employeeFirstName={employeeFirstName}
                         employeeLastName={employeeLastName}
-                        timeTaken={timeTaken}
+                        timeTaken={+timeTaken}
                         description={description}
-                        projectTimeRemaining={projectTimeRemaining}
+                        projectTimeRemaining={+projectTimeRemaining}
                         dateCreated={dateCreated} />
                 </div>
             </div>

@@ -1,6 +1,16 @@
+interface Employee {
+    id: number
+    first_name: string
+    last_name: string
+}
+
+type Props = {
+    employees: Array<Employee>
+}
+
 import EmployeeDisplay from "../../components/EmployeeDisplay";
 
-export default function Projects({ employees }) {
+export default function Projects({ employees }: Props) {
 
     return (
         <div className="flex justify-center bg-slate-200">
