@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 
-export default function ProjectDisplay({ project }) {
+interface Project {
+    id: number
+    estimated_time_required: number
+    time_spent: number
+    expected_time_remaining: number
+}
+
+type Props = {
+    project: Project
+}
+
+export default function ProjectDisplay({ project }: Props) {
 
     return (
         <>

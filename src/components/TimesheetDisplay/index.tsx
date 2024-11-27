@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 
-export default function TimesheetDisplay({ timesheet }) {
+interface Timesheet {
+    id: number
+    project_id: number
+    employee_id: number
+    time_taken: number
+    description: string
+}
+
+type Props = {
+    timesheet: Timesheet
+}
+
+export default function TimesheetDisplay({ timesheet }: Props) {
 
     return (
         <>

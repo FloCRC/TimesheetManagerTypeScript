@@ -10,7 +10,7 @@ type Props = {
     employee: Employee
 }
 
-const EmployeeDisplay = ({ employee }: Props) => {
+export default function EmployeeDisplay({ employee }: Props) {
 
     return (
         <>
@@ -25,5 +25,3 @@ const EmployeeDisplay = ({ employee }: Props) => {
         </>
     )
 }
-
-export default EmployeeDisplay

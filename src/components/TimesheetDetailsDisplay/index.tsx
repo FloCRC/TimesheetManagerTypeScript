@@ -1,4 +1,14 @@
-export default function TimesheetDetailsDisplay({ projectID, employeeFirstName, employeeLastName, timeTaken, description, projectTimeRemaining, dateCreated }) {
+type Props = {
+    projectID: number
+    employeeFirstName: string
+    employeeLastName: string
+    timeTaken: number
+    description: string
+    projectTimeRemaining: number
+    dateCreated: string
+}
+
+export default function TimesheetDetailsDisplay({ projectID, employeeFirstName, employeeLastName, timeTaken, description, projectTimeRemaining, dateCreated }: Props) {
 
     const date = new Date(dateCreated).toDateString()
 
